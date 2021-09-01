@@ -31,7 +31,7 @@
     <!-- to-do lists-->
     <div id="todo-column">
       <h2>To Do</h2>
-      <div class="card new-task">
+      <div class="new-task">
         <form action="">
           <input type="title" name="title" id="titleInput" placeholder="Add your new task">
           <input type="description" name="description" id="descrInput" placeholder="Description..">
@@ -42,7 +42,7 @@
       </div>
 
       <!-- each new task list here -->
-      <div class="todoList">
+      <div class="todoList list">
         <!-- data from local storage -->
       </div>
     </div>
@@ -52,9 +52,11 @@
       <div>
         <h2>Done</h2>
       </div>
-      <div class="todoList">
-      <!-- data from local storage -->
-      </div>
+      <div class="doneList list">
+      <!-- draggable data -->
+        <div id="dragnotes" class="card" draggable="false">
+          Drag complete task here
+        </div>
     </div>
   </div>
 
