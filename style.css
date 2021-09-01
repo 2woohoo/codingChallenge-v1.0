@@ -66,8 +66,10 @@ img {
   padding: 12px;
 }
 
-.todo-column, .done-column {
+#todo-column, #done-column {
   width: 280px;
+  min-height: 400px;
+  border: 1px solid;
   margin: 0 20px;
 }
 
