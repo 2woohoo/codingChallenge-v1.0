@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Ease Do</title>
+  <script src="https://kit.fontawesome.com/86e46a50b9.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <!-- <img src="./image/logo.png" alt="logo" style="vertical-align:center"> -->
+      <h1>Ease Do</h1>
+    </div>
+    <div class="search-form">
+      <input type="text" placeholder="Search"/>
+      <span style="font-size: 1em; color: lightgray;">
+        <i class="fas fa-search"></i>
+      </span>
+    </div>
+  </div>
+
+  <!-- contents -->
+  <div class="container">
+    <!-- to-do lists-->
+    <div class="todo-column">
+      <h2>To Do</h2>
+      <div class="card new-task">
+        <form action="">
+          <input type="title" name="title" id="titleInput" placeholder="Add your new task">
+          <input type="description" name="description" id="descrInput" placeholder="Description..">
+        </form>
+        <button class="add-btn">
+          <i style="color: #fff;" class="fas fa-plus"></i>
+        </button>
+      </div>
+
+      <!-- each new task list here -->
+      <div class="todoList">
+        <!-- data from local storage -->
+      </div>
+    </div>
+
+    <!-- done lists-->
+    <div class="done-column">
+      <div>
+        <h2>Done</h2>
+      </div>
+      <div class="todoList">
+      <!-- data from local storage -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

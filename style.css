@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&family=Roboto+Condensed&display=swap');
+
+:root {
+  --purple: #BB94E3;
+  --dark-purple: #B88AE8;
+  --dark-olive: #1A281F;
+  --light-olive: #5E6862;
+}
+
+/* ***** General ***** */
+body {
+  margin: 0;
+  pad: 0;
+}
+
+h1 {
+  color: var(--dark-olive);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 28px;
+}
+
+h2, h3, p {
+  color: var(--light-olive);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2 {
+  color: var(--dark-olive);
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 12px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ***** Navbar ***** */
+.navbar {
+  width: screen;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 12px;
+  margin: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
+}
+
+.logo {
+  display: flex;
+}
+
+/* ***** Main Contents ***** */
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
+  padding: 12px;
+}
+
+.todo-column, .done-column {
+  width: 280px;
+  margin: 0 20px;
+}
+
+.todoList {
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 80px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
+  padding: 4px 12px;
+  margin: 12px 0;
+}
+
+.new-task {
+ background-image: linear-gradient(to bottom right, var(--purple), var(--dark-purple));
+}
+
+.card form {
+  width: 100%;
+  border: none;
+  margin-bottom: 4px;
+}
+
+.card input {
+  width: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0 0 0 4px;
+  margin-bottom: 4px;
+}
+
+.card input:focus {
+  outline: noned var(--purple): white;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+#titleInput {
+  font-size: 18px;
+}
+
+#descrInput {
+  font: 12px;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  display: flex;
+  align-items: start;
+  height: 30px;
+  margin: 0;
+}
+
+.add-btn {
+  width: 100%;
+  height: 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  border:none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.add-btn.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.add-btn:hover {
+  border: none;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
+  background-color: var(--dark-purple);
+}
+
+/* ***** checkbox ***** */
+input[type="checkbox"] {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  color:  var(--purple);
+  border: 1px solid var(--purple);
+  border-radius: 4px;
+  appearance: none;
+  outline: 0;
+  cursor: pointer;
+  transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+}
+
+input[type="checkbox"]::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 3px;
+    left: 5px;
+    width: 4px;
+    height: 7px;
+    border-style: solid;
+    border-color: white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+
+input[type="checkbox"]:checked {
+    color: white;
+    border-color: var(--purple);
+    background:  var(--purple);
+}
+
+input[type="checkbox"]:checked::before {
+      opacity: 1;
+}
+
