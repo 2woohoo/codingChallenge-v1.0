@@ -17,6 +17,7 @@ h1 {
   color: var(--dark-olive);
   font-family: 'Bebas Neue', cursive;
   font-size: 28px;
+  margin: 4px auto;
 }
 
 h2, h3, p {
@@ -62,8 +63,36 @@ img {
   display: flex;
 }
 
-.search-bar {
-  margin-right: 24px;
+.searchContainer {
+  padding: 0 4px;
+  margin-right: 40px;
+}
+
+.searchWrapper {
+  width: 100%;
+  height: 24px;
+  border: 1px solid var(--purple);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 2px 8px;
+}
+.searchWrapper .icon {
+  font-size: 14px;
+}
+
+#searchBar {
+  outline: none;
+  border: none;
+  color: var(--purple);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#searchBar ::placeholder {
+  color: lightgray;
+  opacity: 0.7;
 }
 
 /* ***** Main Contents ***** */
@@ -72,7 +101,7 @@ img {
   display: flex;
   justify-content: center;
   background-color: var(--white);
-  margin-top: 70px;
+  margin-top: 90px;
   padding: 12px;
 }
 
@@ -162,7 +191,7 @@ img {
   outline: noned var(--purple): white;
 }
 
-::placeholder {
+.card ::placeholder, .new-task ::placeholder {
   color: white;
   opacity: 0.7;
 }
@@ -219,13 +248,13 @@ img {
   margin: 0;
 }
 
-.fa-trash, .fa-pen, .fa-save{
+.fa-trash, .fa-pen, .fa-save, .fa-search{
   color: lightgray;
   cursor: pointer;
   margin-left: 12px;
 }
 
-.fa-trash:hover, .fa-pen:hover, .fa-save:hover {
+.fa-trash:hover, .fa-pen:hover, .fa-save:hover, .fa-search:hover {
   color: var(--purple);
 }
 
